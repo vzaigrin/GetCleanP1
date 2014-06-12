@@ -40,7 +40,10 @@ run_analysis <- function()  {
   tidy<-as.data.frame(sapply(as,function(x) colMeans(xys[,-c(80,81)])))
 
 # Write a tidy data set to a file "tidy.txt"
+# write.csv(tidy,"tidy.txt")
 
-  write.csv(tidy,"tidy.txt")
+# Return a tidy data set
+
+  return(tidy)
 
 }
