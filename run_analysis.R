@@ -37,7 +37,7 @@ run_analysis <- function()  {
 
   xys<-cbind(Xms,subject,ynamed)
   as<-split(xys,interaction(subject[,1],ynamed[,1]))
-  tidy<-as.data.frame(sapply(as,function(x) colMeans(xys[,-c(80,81)])))
+  tidy<-as.data.frame(sapply(as,function(x) colMeans(x[,-c(80,81)])))
 
 # Write a tidy data set to a file "tidy.txt"
 # write.csv(tidy,"tidy.txt")
