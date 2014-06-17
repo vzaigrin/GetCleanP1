@@ -35,9 +35,8 @@ run_analysis <- function()  {
 
 # Create a tidy data set with average of each variable for each acitivy and each subject
 
-  xys<-cbind(Xms,subject,ynamed)
-  as<-split(xys,interaction(subject[,1],ynamed[,1]))
-  tidy<-as.data.frame(sapply(as,function(x) colMeans(x[,-c(80,81)])))
+  as<-split(Xms,interaction(subject[,1],ynamed[,1]))
+  tidy<-as.data.frame(sapply(as,function(x) colMeans(x)))
 
 # Write a tidy data set to a file "tidy.txt"
 # write.csv(tidy,"tidy.txt")
