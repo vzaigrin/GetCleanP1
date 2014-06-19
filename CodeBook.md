@@ -1,6 +1,7 @@
 ## Codebook for tidy data set
 
 Each column contains variables combining subject id and activity name in form id.activity.
+
 Each row contains average value for observations:
 
 * tBodyAcc-mean()-X
